@@ -11,6 +11,12 @@ example-shopify.theme.toml
 
 # Documentation
 README.md
+CLAUDE.md
+sections/CLAUDE.md
+snippets/CLAUDE.md
+
+# Claude Code rules
+.claude/
 
 # This file
 .shopifyignore
