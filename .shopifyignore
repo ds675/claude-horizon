@@ -1,0 +1,16 @@
+# IDE & editor config
+.cursor/
+
+# Git
+.git/
+.gitignore
+
+# Shopify CLI config (contains credentials)
+shopify.theme.toml
+example-shopify.theme.toml
+
+# Documentation
+README.md
+
+# This file
+.shopifyignore
