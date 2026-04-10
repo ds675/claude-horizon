@@ -4,6 +4,7 @@
 
 | File | Purpose | Blocks? |
 |------|---------|---------|
+| `custom-announcement-bar.liquid` | Two-column announcement bar (left text + desktop-only right text/link) | No |
 | `carousel.liquid` | General purpose carousel | Yes — slides |
 | `layered-slideshow.liquid` | Hero-style layered slideshow | Yes — slides |
 | `header.liquid` | Site header | No |

@@ -9,6 +9,7 @@
  */
 {
   "accessibility": {
+    "custom_announcement_bar": "Announcement bar",
     "account": "Account",
     "cart": "Cart",
     "cart_count": "Total items in cart",
