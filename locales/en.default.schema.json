@@ -35,6 +35,9 @@
     "visible_if_collection_has_more_products": "Visible if collection has more products than shown",
     "advanced": "Advanced",
     "appearance": "Appearance",
+    "desktop_only": "Visible on desktop only",
+    "left_content": "Left content",
+    "right_content": "Right content",
     "arrows": "Arrows",
     "background": "Background",
     "background_image": "Background image",
@@ -248,6 +251,7 @@
     "animations": "Animations",
     "announcement": "Announcement",
     "announcement_bar": "Announcement bar",
+    "custom_announcement_bar": "Custom announcement bar",
     "badges": "Badges",
     "blog": "Blog",
     "blog_card": "Blog card",
@@ -749,6 +753,10 @@
     "below_media": "Below media"
   },
   "settings": {
+    "left_link": "Left link",
+    "left_text": "Left text",
+    "right_link": "Right link",
+    "right_text": "Right text",
     "accordion": "Accordion",
     "account": "Account",
     "actions_display_style": "Menu style",

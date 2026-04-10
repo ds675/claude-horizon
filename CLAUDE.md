@@ -22,6 +22,7 @@ Custom sections, blocks, and snippets extend Horizon — core files are never mo
 - `.claude/localization.md` — translation requirements, `| t` filter, locale files
 - `.claude/blocks.md` — theme block development, static blocks, nested blocks
 - `.claude/workflow.md` — how to approach every task
+- `.claude/git.md` — git rules: never commit or push unless explicitly asked
 
 ## Non-negotiables
 

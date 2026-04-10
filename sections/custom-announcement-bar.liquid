@@ -1,0 +1,177 @@
+<aside
+  class="custom-announcement-bar color-{{ section.settings.color_scheme }}"
+  aria-label="{{ 'accessibility.custom_announcement_bar' | t }}"
+  style="
+    --bar-padding-top: {{ section.settings.padding_top }}px;
+    --bar-padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div class="custom-announcement-bar__inner">
+
+    {%- unless section.settings.left_text == blank -%}
+      <div class="custom-announcement-bar__left">
+        {%- if section.settings.left_link != blank -%}
+          <a href="{{ section.settings.left_link }}" class="custom-announcement-bar__link">
+            {{ section.settings.left_text }}
+          </a>
+        {%- else -%}
+          <p class="custom-announcement-bar__text">{{ section.settings.left_text }}</p>
+        {%- endif -%}
+      </div>
+    {%- endunless -%}
+
+    {%- unless section.settings.right_text == blank -%}
+      <div class="custom-announcement-bar__right">
+        {%- if section.settings.right_link != blank -%}
+          <a href="{{ section.settings.right_link }}" class="custom-announcement-bar__link custom-announcement-bar__link--underline">
+            {{ section.settings.right_text }}
+          </a>
+        {%- else -%}
+          <p class="custom-announcement-bar__text custom-announcement-bar__text--underline">{{ section.settings.right_text }}</p>
+        {%- endif -%}
+      </div>
+    {%- endunless -%}
+
+  </div>
+</aside>
+
+{% stylesheet %}
+  .custom-announcement-bar {
+    width: 100%;
+  }
+
+  .custom-announcement-bar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 32px;
+    padding-block: var(--bar-padding-top) var(--bar-padding-bottom);
+    padding-inline: 12px;
+  }
+
+  .custom-announcement-bar__left,
+  .custom-announcement-bar__right {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: var(--color-foreground);
+  }
+
+  .custom-announcement-bar__text {
+    margin: 0;
+  }
+
+  .custom-announcement-bar__link {
+    color: var(--color-foreground);
+    text-decoration: none;
+  }
+
+  .custom-announcement-bar__link--underline,
+  .custom-announcement-bar__text--underline {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .custom-announcement-bar__right {
+    display: none;
+  }
+
+  @media screen and (min-width: 750px) {
+    .custom-announcement-bar__inner {
+      justify-content: space-between;
+      padding-inline: 64px;
+    }
+
+    .custom-announcement-bar__left,
+    .custom-announcement-bar__right {
+      font-size: 0.875rem;
+    }
+
+    .custom-announcement-bar__right {
+      display: block;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.custom_announcement_bar",
+  "enabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.left_content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "left_text",
+      "label": "t:settings.left_text",
+      "default": "Your Shop Consultant is <strong><u>SHOP.COM</u></strong>"
+    },
+    {
+      "type": "url",
+      "id": "left_link",
+      "label": "t:settings.left_link"
+    },
+    {
+      "type": "header",
+      "content": "t:content.right_content"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:content.desktop_only"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "right_text",
+      "label": "t:settings.right_text",
+      "default": "Start Your SHOP.COM Business"
+    },
+    {
+      "type": "url",
+      "id": "right_link",
+      "label": "t:settings.right_link"
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:settings.color_scheme",
+      "default": "scheme-4"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.custom_announcement_bar"
+    }
+  ]
+}
+{% endschema %}
