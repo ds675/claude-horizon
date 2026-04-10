@@ -1,0 +1,11 @@
+{
+  "name": "horizon-theme",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "shopify theme dev --environment dev",
+    "push": "shopify theme push --environment dev",
+    "pull": "shopify theme pull --environment dev",
+    "check": "shopify theme check"
+  }
+}

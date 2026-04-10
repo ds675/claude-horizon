@@ -1,8 +1,8 @@
 # IDE & editor config
-.cursor/
+.cursor/*
 
 # Git
-.git/
+.git/*
 .gitignore
 
 # Shopify CLI config (contains credentials)
@@ -17,7 +17,10 @@ snippets/CLAUDE.md
 blocks/CLAUDE.md
 
 # Claude Code rules
-.claude/
+.claude/*
+
+# Node
+package.json
 
 # This file
 .shopifyignore
