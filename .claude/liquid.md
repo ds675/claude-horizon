@@ -9,6 +9,31 @@
 - Guard blank content before rendering — never render empty elements
 - Never loop a collection without a `limit:` or `paginate`
 
+## Settings shorthand
+
+When a section or block has multiple settings references, always assign the settings object to a short variable at the top of the file. Then assign individual settings from it. This reduces repetition and keeps the markup clean.
+
+```liquid
+{% liquid
+  assign s = section.settings
+  assign color_scheme = s.color_scheme
+  assign heading = s.heading
+  assign padding_top = s.padding_top
+%}
+```
+
+For blocks, use `b = block.settings`:
+
+```liquid
+{% liquid
+  assign b = block.settings
+  assign heading = b.heading
+  assign content = b.content
+%}
+```
+
+Only skip the shorthand if a section/block uses a single setting in one place.
+
 ## Inline variables
 
 Prefer inlining Liquid directly in HTML attributes rather than declaring intermediate variables. Only assign a variable if the same complex expression is used in 2+ places or the logic would otherwise harm readability.
