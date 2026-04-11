@@ -22,5 +22,8 @@ blocks/CLAUDE.md
 # Node
 package.json
 
+# Task files
+tasks/*
+
 # This file
 .shopifyignore
